@@ -1,0 +1,69 @@
+.authorized_purchasers_h3 {
+	font-size: 18px;
+	font-weight: 700;
+	color: $flna-black;
+	margin: 10px 0px 10px 0px;
+}
+
+.authorized_purchasers_panel {
+	border-color: $color-white;
+	border-radius: 0;
+
+	.form-control-plaintext {
+		font-size: $body-text-size-current;
+		font-weight: 700;
+		color: $color-darkGrey;
+	}
+
+	.list-group-item {
+		padding: 10px 0;
+		margin: 0 15px;
+		border: 0;
+		border-bottom: 1px solid $color-white;
+		border-radius: 0;
+	}
+
+	.delete-btn,
+	.edit-btn {
+		font-size: $body-text-size-small-current;
+		text-decoration: underline;
+	}
+}
+
+.authorized_purchasers_h3,
+.authorized_purchasers_panel {
+	display: none;
+}
+
+form#editForm {
+	h5.modal-title {
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	label {
+		font-size: 10px;
+		color: $color-gray-primary;
+		text-transform: uppercase;
+	}
+}
+
+div#deleteModal .modal-body p {
+	font-size: 10px;
+	font-weight: 700;
+	color: $flna-black;
+}
+
+.padding-right-none {
+	padding-right: 0;
+}
+
+.authorized-purchaser-title {
+	font-size: 18px;
+	font-weight: 600!important;
+	text-align: center;
+}
+
+.authorized_purchasers_panel {
+	display: block;
+}

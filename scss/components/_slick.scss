@@ -1,0 +1,52 @@
+/* Dots */
+.slick-dotted.slick-slider {
+	margin-bottom: 0 !important;
+
+}
+
+.slick-dots {
+	position: absolute;
+	bottom: 10px !important;
+}
+
+.slick-dots li {
+	margin: 0 !important;
+}
+
+.slick-prev {
+	-webkit-transform: scaleX(-1) !important;
+	-moz-transform: scaleX(-1) !important;
+	-o-transform: scaleX(-1) !important;
+	transform: scaleX(-1) !important;
+	filter: FlipH !important;
+	-ms-filter: "FlipH" !important;
+}
+
+.slick-prev:before {
+	content: url('../images/carouselArrow.svg') !important;
+
+}
+
+.slick-next:before {
+	color: $flna-blue !important;
+	content: url('../images/carouselArrow.svg') !important;
+}
+
+
+.slick-dots li button {
+	width: 15px !important;
+
+}
+
+
+.slick-dots li button:before {
+	font-size: 8px !important;
+	opacity: 1 !important;
+	color: $flna-gray-disabled !important;
+
+}
+
+.slick-dots li.slick-active button:before {
+	opacity: 1 !important;
+	color: $flna-blue !important;
+}

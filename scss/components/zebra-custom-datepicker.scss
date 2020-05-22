@@ -1,0 +1,73 @@
+.Zebra_DatePicker_Icon_Wrapper {
+    input {
+        &.form-control[readonly] {
+            background-color: transparent; 
+            border-radius: 0;
+            box-shadow: none;
+            border: 1px solid $flna-gray-border;
+            &:focus,
+            &:active,
+            &:hover {
+                border: 2px solid $flna-gray-border;
+            }
+        }
+    }
+    .Zebra_DatePicker_Icon {
+        background: transparent;
+        top: 13px!important;
+        &:before {
+            border-style: solid;
+            border-width: 0.12em 0.12em 0 0;
+            content: '';
+            display: inline-block;
+            height: 10px;
+            left: 0.15em;
+            position: absolute;
+            top: 0;
+            transform: rotate(135deg);
+            vertical-align: top;
+            width: 10px;
+            color: $flna-gray;
+        }
+    }
+}
+.Zebra_DatePicker {
+   border-radius: 0!important;
+   table {
+        width: 100% !important;
+    }
+   .dp_monthpicker {
+       &.dp_body {
+           width: 100%;
+       }
+   }
+   .dp_header,
+   .dp_footer {
+    .dp_hover {
+       background: transparent!important;
+       text-decoration: underline!important;
+       border-radius: 0!important;
+    }
+   }
+   td {
+       &.dp_selected {
+            color: $flna-white !important;
+            height: 18px;
+            text-align: center;
+            background: $flna-blue !important;
+            border-radius: 30px !important;
+        }
+        &.dp_hover {
+            background: $flna-blue !important; 
+            border-radius: 30px !important;
+        }
+    }
+    .dp_body {
+        .dp_hover {
+            color: $flna-white!important;
+        }
+    }
+}
+.requestedDateCal {
+    width: 407px;
+}

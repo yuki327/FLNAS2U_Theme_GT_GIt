@@ -1,0 +1,46 @@
+//Carousel
+
+.carousel {
+    position: relative;
+    max-width: 1170px;
+    margin: auto;
+}
+
+.carousel-indicators {
+    bottom: 0;
+    z-index: 0;
+    margin: auto;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    left: auto;
+
+    @include respond(small-down) {
+        padding: 0 0 0 10px;
+    }
+
+    li {
+        background-color: $flna-gray-disabled;
+        border: none;
+        width: 8px;
+        height: 8px;
+
+        &.active,
+        &:active {
+            background-color: $flna-blue;
+            margin: 1px;
+
+            /* remove when bootstrap.min.css is removed in theme */
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
+
+.carousel-inner {
+    >.item {
+        &.splash-item {
+            max-height: 357px;
+        }
+    }
+}

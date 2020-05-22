@@ -1,0 +1,166 @@
+/****************************************************************
+*
+* viewports
+* See mixins file for viewport includes
+* xs = 320px - 767px  - mobile
+* sm = 768px - 991px - tablet
+* md = 992px - 1199px - desktop
+* large = 1200 +
+* desktop = 961px+ (max content width is 1170px) 
+* 
+****************************************************************/
+$xsmall-breakpoint: 321px;
+$small-breakpoint: 768px;
+$medium-breakpoint: 992px;
+$ipad-breakpoint: 1024px;
+$large-breakpoint: 1200px;
+
+@mixin respond($media, $max: null) {
+	@if $media=="print" {
+		@media only print {
+			@content;
+		}
+	}
+	@else if $media=="extra-small" {
+		@media only screen and (max-width: $xsmall-breakpoint - 1) {
+			@content;
+		}
+	}
+
+	@else if $media=="x-small" {
+		@media only screen and (max-width: $small-breakpoint - 1) {
+			@content;
+		}
+	}
+
+	//ipad portrait, mobile - to account for the way code is currently
+	@else if $media=="small-down" {
+		@media only screen and (max-width: $medium-breakpoint - 1) {
+			@content;
+		}
+	}
+
+	@else if $media=="small" {
+		@media only screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint - 1) {
+			@content;
+		}
+	}
+
+	@else if $media=="medium" {
+		@media only screen and (min-width: $medium-breakpoint) and (max-width: $large-breakpoint - 1) {
+			@content;
+		}
+	}
+
+	@else if $media=="medium-down" {
+		@media only screen and (max-width: $large-breakpoint - 1) {
+			@content;
+		}
+	}
+
+	//to account for the way code is currently
+	@else if $media=="medium-up" {
+		@media only screen and (min-width: $medium-breakpoint) {
+			@content;
+		}
+	}
+
+	@else if $media=="ipad-down" {
+		@media only screen and (max-width: $ipad-breakpoint) {
+			@content;
+		}
+	}
+
+	@else if $media=="ipad-landscape" {
+		@media only screen and (min-width: $medium-breakpoint) and (max-width: $ipad-breakpoint) {
+			@content;
+		}
+	}
+
+	@else if $media=="large" {
+		@media only screen and (min-width: $large-breakpoint) {
+			@content;
+		}
+	}
+
+	@else if type-of($media)==number and $max==null {
+		@media only screen and (min-width: $media) {
+			@content;
+		}
+	}
+
+	@else if type-of($media)==number and type-of($max)==number {
+		@media only screen and (min-width: $media) and (max-width: $max - 1) {
+			@content;
+		}
+	}
+}
+
+@mixin containerBox($minHeight, $maxHeight) {
+	display: -webkit-box;
+	min-height: $minHeight;
+	max-height: $maxHeight;
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color) {
+	-webkit-box-shadow: $top $left $blur $spread $color;
+	-moz-box-shadow: $top $left $blur $spread $color;
+	box-shadow: $top $left $blur $spread $color;
+}
+
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin qtyBtn($color, $border, $background) {
+	font-weight: 700;
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+}
+
+@mixin notification-circle() {
+	font-size: 10px;
+	min-width: 18px;
+	height: 18px;
+	color: $flna-white;
+	text-align: center;
+	background: $flna-blue;
+	border-radius: 15px;
+}
+
+// @mixin overlay-background(){
+// 	content: "";
+//     display: block;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+//     z-index: 999;
+// 	background-color: $flna-gray;
+// 	opacity: .54;
+// }
+
+@mixin tooltip-triangle($right, $top){
+	position: absolute;
+	right: $right;
+	top: $top;
+	content: '';
+	width: 0;
+	height: 0; 
+}
+
+@mixin fieldErrorIcon() {
+	background-image: url(../icons/alert_filled.svg);
+	display: block;
+	width: 20px;
+	height: 20px;
+	content: "";
+	background-repeat: no-repeat;
+	position: absolute;
+}

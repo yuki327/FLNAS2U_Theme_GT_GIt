@@ -1,0 +1,104 @@
+//Header
+
+header {
+	/* TO REMOVE */
+	font-size: 14px;
+	line-height: 25px;
+}
+
+header {
+	.cc_header {
+		.messaging_block {
+			.alert-danger {
+				color: $flna-white;
+				background-color: $flna-red;
+				text-align: center;
+
+				&:before {
+					background-image: url(../icons/errorIconTopsvg.svg);
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+					content: '';
+					background-repeat: no-repeat;
+					position: relative;
+					top: 8px;
+					@include respond(x-small) {
+						top: 2px;
+						width: 35px;
+						height: 35px;
+					}
+					@include respond(extra-small) {
+						top: 14px;
+						left: 32px;
+						height: 35px;
+						position: absolute;
+					}
+				}
+
+				p {
+					padding-left: 10px;
+					width: auto;
+					display: inline-block;
+					margin: 0;
+					@include respond(x-small) {
+						display: inline-block;
+						line-height: 25px;
+					}
+					@include respond(extra-small) {
+						padding: 0 0 0 20px;
+					}
+				}
+
+			}
+
+			.alert {
+				border-radius: 0;
+				margin-bottom: 0;
+				height: 40px;
+				line-height: 37px;
+				padding: 0;
+				@include respond(x-small) {
+					padding: 10px;
+					display: flex;
+					height: auto;
+				}
+			}
+		}
+
+		// p {
+		// 	font-size: 16px;
+		// }
+	}
+}
+
+.contentBody {
+  background-color: $flna-white;
+  padding: 15px;
+
+  .origin {
+    background-color: $flna-lighter-white;
+  }
+}
+
+#loginBtn {
+  margin: 0 44px;
+
+  @include respond(ipad-down) {
+    margin: 0;
+  }
+}
+
+.headerLoginLink,
+.registerLink {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.padding-0 {
+  padding: 0;
+}

@@ -1,0 +1,100 @@
+/****************************************************************
+*
+* colors
+* names taken from FLNA Design system
+* Specific use colors are identified in the following sections
+*
+****************************************************************/
+$flna-blue: #0085ca;
+$flna-dark-blue: #015885;
+
+$flna-black: #000;
+$flna-white: #fff;
+$flna-gray: #666;
+
+$flna-gray-medium: #b8b8b8;
+$flna-gray-light: #f1f1f1;
+$flna-gray-border: #8c8c8c; //for input fields - default, focus, disabled
+$flna-flavorText: #B3B3B3;
+$flna-gray-disabled: #dedede;
+$flna-gray-disabled-text: #919191;
+$flna-gray-label: #d2d2d2;
+$flna-gray-line : #DEDEDE;
+$flna-cardBorder: #ECECEC;
+
+$flna-dropshadow: 0 0 8px 1px rgba(0, 0, 0, 0.08);
+
+$flna-green: #008240; //success
+$flna-red: #a62635; //error
+$flna-orange: #fe5a17; //warning
+
+// these purples are not in use, leaving here for now since they're in the design
+// $flna-violet-100: #6f2d86;
+// $flna-violet-80: #a379b1;
+// $flna-violet-60: #c4a9cd;
+// $flna-violet-40: #d9c8df;
+$flna-light-blue: #E1F1FF;
+
+/**********************************************
+* 
+* body text
+* 
+***********************************************/
+$button-text-font-size: 12px;
+$body-text-size-small-current: 12px;
+$body-text-size-current: 14px;
+$body-text-size-medium-current: 16px;
+
+/**********************************************
+*
+* color variable -- Old css
+* todo: get rid of
+*
+***********************************************/
+$color-blue-nav: #0954a0;
+$color-white: #dedad4;
+$color-darkGrey: #4f4f4f;
+$color-red: #fc4140;
+$color-gray: #424242;
+$color-white-nav: #f9f9f9;
+$color-lightGrey: #e4e4e4;
+$color-light-blue: #6ea0f1;
+$color-lightest-blue:#E1F1FF;
+$color-green: #7ed321;
+$color-blue: #21b8ef;
+$background_color_light_gray: rgba(200, 200, 200, 0.4);
+$color-lightpink: #ffd6d6;
+$white-color-primary-nav: #e6e6e6;
+$color-lightblue-nav: #d6f2fe;
+$color-gray-primary: #646464;
+$color-brown: #ab1514;
+$lightGrey-color-nav: #d4d4d4;
+$skyblue: #0e94c5;
+$skyblue-nav: #0a6587;
+$color_transparents: transparent;
+$color_silver: #c0c0c0;
+
+/**********************************************
+*
+* Color Aliases - old css
+* todo: get rid of
+* 
+***********************************************/
+$myaccount-line-color: $color-lightblue-nav;
+$myaccount-heading-background: $color-red;
+
+$tab-active-color: $color-red;
+
+/****************************************************************
+*
+* existing flna colors
+* todo: get rid of
+*
+****************************************************************/
+$flna-blue-nav: #0954a0;
+$flna-lightest-blue:#E1F1FF;
+$flna-light-Grey:#ddd;
+$flna-dark-gray: #4f4f4f;
+$flna-light-white: #ececec;
+$flna-lighter-white: #fbf9f6;
+$flna-error-color: #fc4140;

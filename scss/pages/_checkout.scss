@@ -1,0 +1,267 @@
+/* CHECKOUT TITLE */
+.cart_header {
+	padding-left: 0;
+	margin-top: 25px;
+
+    h1 {
+		font-weight: 700;
+	}
+}
+
+.checkout-subtitle {
+	border-bottom: 1px solid $flna-gray-line;
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+
+.cc_address_entry_shipping {
+	&.col-sm-12 {
+		padding: 0;
+	}
+}
+
+.checkOutFixed {
+	position: fixed;
+	z-index: 2;
+}
+
+/* STYLES FOR BOTH CHECKOUT AND CONFIRMATION PAGE */
+.summaryWidget {
+	.payment-checkout-panel {
+		line-height: 25px;
+		width: 370px;
+		border: 1px solid $flna-cardBorder;
+		position: relative;
+		box-shadow: $flna-dropshadow;
+		padding: 0 4px 10px 3px;
+		background-color: $flna-white;
+
+		.cart_summary_body {
+			.cart_summary_header {
+				display: inline-block;
+
+				h2 {
+					font-weight: 700;
+				}
+			}
+
+			#view_cart_link {
+				float: right;
+				padding-top: 25px;
+				font-weight: 700;
+			}
+
+			.grand_total {
+				margin-top: 16px;
+
+				.checkout-total {
+					margin-top: 24px;
+					padding: 24px 0 0;
+					border-top: 1px solid $flna-gray-line;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+.checkout-container {
+	padding-left: 20px;
+	padding-right: 20px;
+
+	.cart_summary_body {
+		.cart_summary_header {
+			max-width: 65%;
+		}
+	}
+}
+
+.addressForm {
+	.form-group {
+		margin-bottom: 25px;
+
+		&.has-error {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* BILLING ADDRESS FIELD ERRORS */
+.help-block.with-errors {
+	li {
+		padding-left: 25px;
+	}
+
+	.list-unstyled {
+		padding: 5px 0;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 700;
+		float: left;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		width: 100%;
+
+		&:before {
+			@include fieldErrorIcon();
+		}
+	}
+}
+
+/* SUBMIT ORDER SECTION */
+#place_order_target {
+	float: left;
+	margin-bottom: 92px;
+
+	.btn-submit-order {
+		margin-top: 40px;
+		width: 300px;
+	}
+}
+
+.address_selection_display {
+	line-height: 25px;
+}
+
+/* ?? */
+.checkoutNav {
+	padding: 0 15px 15px;
+}
+
+.cc_lli_shipoptions .cc_address_entry {
+	display: none;
+}
+
+/* to remove */
+.panel-default {
+	border: 0;
+}
+
+/* taken from FLNACC_Payment_ACH_edit */
+#achFrame {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	border: 0;
+}
+
+/* on CyberSourcePay/Payment_ACH_Pay */
+.ccPaymentOuterContainer {
+	.alert-danger {
+		background-color: transparent;
+		border-color: transparent;
+		font-weight: 700;
+
+		&:before {
+			@include fieldErrorIcon();
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			margin-right: 15px;
+		}
+	}
+}
+
+/* CybersourcePay */
+#sopccFrame {
+	visibility: hidden;
+	border: 0;
+	width: 0;
+	height: 0;
+}
+
+#sopccAddress {
+	height: 0;
+}
+
+/* PROXY ORDERING MODAL */
+.verifyCredentials {
+	.form-control[disabled] {
+		color: $flna-gray-disabled-text;
+	}
+
+	.form-group {
+		margin-bottom: 20px;
+
+		.forgotPassword {
+			padding-top: 10px;
+			text-align: center;
+			font-weight: 700;
+		}
+	}
+
+	.cc-heading {
+		margin: 0 0 20px 0;
+	}
+
+	.modal-button-group {
+		margin-top: 22px;
+	}
+}
+
+@include respond(ipad-down) {
+	.checkout-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#place_order_target {
+		margin-bottom: 0;
+	}
+}
+
+@include respond(small) {
+	.container {
+		width: auto;
+	}
+}
+
+@include respond(small-down) {
+	.cart_header {
+		margin-bottom: 40px;
+	}
+
+	.summaryWidget {
+		.payment-checkout-panel {
+			width: 100%;
+			padding: 5px;
+		}
+
+		.cart_summary_body {
+			display: flex;
+			flex-direction: column;
+
+			.cart_summary_header {
+				max-width: 100%;
+			}
+
+			#view_cart_link {
+				order: 1;
+				text-align: center;
+				padding-bottom: 20px;
+			}
+		}
+	}
+
+	.cart_summary_target {
+		>div {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+
+	.verifyCredentials {
+		.modal-dialog {
+			width: 90%;
+			margin: auto;
+		}
+	}
+}
+
+@include respond(x-small) {
+	#place_order_target {
+		.btn-submit-order {
+			width: 100%;
+		}
+	}
+}

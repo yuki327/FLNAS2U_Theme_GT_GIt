@@ -1,0 +1,296 @@
+//Forms
+
+.form-control {
+	font-size: 16px;
+	height: 44px;
+	color: $flna-black;
+	border: 1px solid $flna-gray-border;
+	border-radius: 0px;
+	-webkit-appearance: none;
+
+	&:focus,
+	&.focus,
+	&:active,
+	&.active {
+		border-width: 2px;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border-color: $flna-gray-border;
+	}
+}
+
+.dropdown-menu {
+	border-radius: 0;
+	box-shadow: none;
+	border-color: $flna-gray-border;
+	margin-top: -1px;
+	width: 100%;
+	z-index: 999;
+	@include respond(small-down) {
+		min-width: auto;
+	}
+	>li {
+		>a {
+			color: $flna-black;
+			text-decoration: none;
+
+			&:hover,
+			&:focus,
+			&.focus {
+				color: $flna-white;
+				background-color: $flna-blue;
+			}
+		}
+	}
+
+	>.active,
+	>:active {
+		>a {
+			background-color: $flna-blue;
+
+			&:focus,
+			&:hover,
+			&.focus {
+				background-color: $flna-blue;
+			}
+		}
+	}
+
+	>.disabled,
+	>[disabled] {
+		>a {
+			color: $flna-gray-disabled-text;
+
+			&:focus,
+			&:hover,
+			&.focus {
+				color: $flna-gray-disabled-text;
+			}
+		}
+	}
+}
+
+select {
+	&.form-control {
+		background: url(../icons/angle_down.svg) 98%/28px 10px no-repeat;
+	}
+}
+
+label {
+	font-weight: 700;
+	margin-bottom: 8px;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+	select {
+		&.form-control {
+			background: none;
+		}
+	}
+}
+
+.checkbox,
+.radio {
+	margin-top: 3px;
+	margin-bottom: 3px;
+
+	label {
+		min-height: 17px;
+	}
+}
+
+/*radio custom */
+.radio {
+	input[type="radio"] {
+		opacity: 0;
+		margin-left: 10px;
+		margin-top: 1px;
+		z-index: 3;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		left: 0;
+		top: 2px;
+		cursor: pointer;
+	}
+
+	label {
+		padding-left: 28px;
+		position: relative;
+		display: inline-block;
+		font-size: inherit;
+		line-height: inherit;
+	
+		span {
+			position: relative;
+			top: -4px;
+		}
+	
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+			display: inline-block;
+		}
+	
+		&::before {
+			content: '';
+			position: absolute;
+			left: 8px;
+			top: 2px;
+			width: 20px;
+			height: 20px;
+			border: 1px solid $flna-gray-border;
+			border-radius: 100%;
+			background: $flna-white;
+		}
+	
+		&.checked::after {
+			content: '';
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			border-radius: 100%;
+			background: $flna-blue;
+			left: 12px;
+			top: 6px;
+		}
+	}
+}
+
+/* checkbox custom */
+.actionButtons {
+	input[type="checkbox"] {
+		opacity: 0;
+		width: 19px;
+		height: 17px;
+		margin-top: 5px;
+	}
+
+	label {
+		position: relative;
+
+		.SavePayment {
+			font-size: 16px;
+			padding-left: 3px;
+			position: relative;
+			top: -1px;
+			font-weight: 400;
+		}
+
+		&::before {
+			content: "";
+			display: inline-block;
+			height: 20px;
+			width: 20px;
+			border: 1px solid gray;
+			top: 3px;
+		}
+
+		&::after {
+			content: "";
+			display: inline-block;
+			height: 6px;
+			width: 9px;
+			border-left: 2px solid;
+			border-bottom: 2px solid;
+			transform: rotate(-45deg);
+			left: 6px;
+			top: 9px;
+			color: $flna-white;
+		}
+
+		&.checked {
+			&::after {
+				color: $flna-blue;
+			}
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+		}
+	}
+
+	label.disabled {
+		&::before {
+			border: 1px solid $flna-gray-disabled;
+		}
+
+		&::after {
+			opacity: 0.3;
+		}
+	}
+}
+
+.input-sm {
+	height: 27px;
+	font-size: 10px;
+}
+
+.input-md {
+	font-size: 17px;
+	height: 43px;
+	padding-left: 15px;
+}
+
+.input-lg {
+	height: 41px;
+	font-size: 14px;
+}
+
+.form-group-lg {
+	.form-control {
+		height: 41px;
+		font-size: 14px;
+	}
+}
+
+.help-block {
+	margin: 0;
+}
+
+.has-error {
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline {
+		color: $flna-red;
+	}
+
+	&.checkbox,
+	&.checkbox-inline,
+	&.radio,
+	&.radio-inline {
+		label {
+			color: $flna-red
+		}
+	}
+
+	.form-control {
+		border-color: $flna-red;
+
+		&:focus {
+			border-color: $flna-red;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+
+	.input-group-addon {
+		color: $flna-red;
+		background-color: $flna-red;
+		border-color: $flna-red;
+	}
+}
+
+.form-horizontal {
+	.checkbox {
+		min-height: 24px;
+	}
+}

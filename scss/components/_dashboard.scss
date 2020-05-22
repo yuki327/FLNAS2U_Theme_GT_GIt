@@ -1,0 +1,185 @@
+/* dashboard */
+
+#FLNACC-Dashboard {
+    margin-top: 40px;
+
+    .cc_lliorder_details .panel {
+        position: relative;
+        @include box-shadow(1px, 2px, 4px, 2px, rgba(0, 0, 0, 0.5));
+        padding: 10px;
+        background: $flna-white;
+    }
+
+    .dashpage_title {
+        font-size: 36px;
+        color: $flna-black;
+    }
+
+    .graphContainer {
+        margin-top: 40px;
+        margin-bottom: 80px;
+        clear: both;
+        display: block;
+
+        .dash_sub_title {
+            font-size: 24px;
+            text-align: center;
+
+            @include respond(small-down) {
+                font-weight: bold;
+            }
+        }
+
+        .dash_header {
+            margin-left: 10px;
+            margin-top: 10px;
+
+            @include respond(small-down) {
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+        }
+
+        .orderContainer {
+            padding: 0;
+            margin: 0;
+
+            .orderVolumLabel {
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+    }
+
+    .dashboard-tabs {
+        &.nav-tabs {
+            border-bottom: 0;
+
+            >li>a {
+                border-bottom: 2px solid $flna-gray-medium;
+                color: $flna-gray-medium;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        }
+
+        @include respond(small-down) {
+            li {
+                margin: 0 5px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .nav {
+        width: 100%;
+
+        .nav-item.active {
+            border-bottom: 4px solid $flna-blue;
+            color: $flna-blue;
+        }
+    }
+
+    .graph_box {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+
+        @include respond(small-down) {
+            margin-bottom: 0;
+        }
+    }
+
+    .dashpage_desc {
+        font-size: 16px;
+        margin-top: 8px;
+
+        @include respond(small-down) {
+            line-height: 32px;
+        }
+    }
+
+    .orderVolumLabel .orderVolumValue {
+        font-size: 48px;
+        color: $flna-blue;
+        text-align: center;
+        margin-top: 3px;
+        line-height: 50px;
+        padding: 10px 0;
+
+        @include respond(small-down) {
+            margin-top: 15px;
+        }
+    }
+
+    .dash_filter_1 {
+        .nav-link {
+            font-size: 16px;
+            color: $flna-gray-medium;
+
+            &.active {
+                font-size: 16px;
+                color: $flna-blue;
+            }
+        }
+    }
+
+    .nav-item {
+        width: 50%;
+        text-align: center;
+        margin-top: 17px;
+    }
+
+    .nav-tabs>li.active>a {
+        border: 0;
+        color: $flna-blue;
+
+    }
+
+    .dash_body {
+        padding: 10px 5%;
+
+        .nav {
+            display: flex;
+            margin: 0 auto;
+        }
+
+        @include respond(small-down) {
+            padding: 10px 2%;
+        }
+    }
+
+    .graph_box .dash_sub_title {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    @include respond(small-down) {
+        .orderContainer {
+            margin-bottom: 20px;
+
+            .FLNACC_dashboardChart .dash_sub_title {
+                text-align: left;
+                margin-bottom: 25px;
+            }
+        }
+
+        .FLNACC-wrapper .graphContainer {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.boxshadow {
+    position: relative;
+    @include box-shadow(1px, 2px, 4px, 2px, rgba(0, 0, 0, 0.5));
+    padding: 10px;
+    background: $flna-white;
+}
+
+@include respond(768) {
+    footer .container {
+        min-width: 735px;
+    }
+}

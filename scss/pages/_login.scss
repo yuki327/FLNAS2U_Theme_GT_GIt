@@ -1,0 +1,214 @@
+//Login Page
+
+#login_main_content {
+	margin-left: calc(50% - 50vw);
+	width: 100vw;
+
+	#pageOne {
+		display: flex;
+		align-items: center;
+
+		@include respond(small-down) {
+			display: block;
+		}
+
+		.login-left-div {
+			height: calc(100vh - 148px);
+			overflow: hidden;
+			text-align: center;
+			background-image: url('../images/Mask.png');
+			background-size: cover;
+
+			@include respond(small-down) {
+				height: 200px;
+			}
+
+			@include respond(x-small) {
+				height: 165px
+			}
+
+			@media (max-height: 650px) and (min-width: 992px) {
+				height: 85vh;
+			}
+
+			.image-div {
+				width: 100%;
+				margin: 0 auto;
+				overflow: hidden;
+				height: 100%;
+				position: relative;
+
+				&.hidden-xs.hidden-sm {
+					background-image: url('../images/login-logochips-default.png');
+					background-repeat: no-repeat;
+					background-position: center calc(100% + 76px);
+					background-size: contain;
+					transform: scale(1.2);
+
+					@media (max-width: 1024px) and (min-height: 1366px) {
+						background-position: center center;
+					}
+
+					@include respond(ipad-landscape) {
+						background-position: center 100px;
+						transform: scale(1.3);
+					}
+
+					@media only screen and (max-width: 1024px) and (min-height: 1300px) {
+						background-position: center calc(100% - 385px);
+					}
+
+					&.canada {
+						background-image: url('../images/login-logochips-canada.png');
+					}
+				}
+			}
+
+			img {
+				object-fit: cover;
+				margin-top: 5%;
+				transform: translate(-50%, 0%);
+				position: absolute;
+
+				@include respond(ipad-landscape) {
+					width: 646px;
+
+				}
+
+				@include respond(small-down) {
+					max-width: 41%;
+					margin-top: 1%;
+				}
+
+				@media only screen and (max-width: 414px) {
+					max-width: 77%;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	.login-right-inner-div {
+		width: 70%;
+		text-align: left;
+		margin: 0 auto;
+
+		@include respond(ipad-down) {
+			width: 89%;
+		}
+
+		@include respond(small-down) {
+			width: 100%;
+		}
+
+		.site-login-title {
+			font-weight: 700;
+			margin-bottom: 27px;
+		}
+
+		#loginFormDsk {
+			.login-form-group {
+
+				#send2Dsk {
+					width: 100%;
+				}
+			}
+
+			.login-button-group {
+				margin-top: 20px;
+
+				@include respond(ipad-down) {
+					padding-top: 0;
+				}
+			}
+
+			.alert-danger {
+				background-color: $flna-white;
+				border: 0;
+				padding-bottom: 10px;
+			}
+
+			.with-errors {
+				font-size: 14px;
+				color: $flna-red;
+				margin-left: 0;
+				margin-top: 0;
+				padding-left: 0;
+				text-align: left;
+				float: left;
+				margin-bottom: 0;
+
+				.list-unstyled {
+					margin-bottom: 0;
+
+					p {
+						padding-left: 25px;
+					}
+
+					div {
+						padding-left: 30px;
+					}
+				}
+			}
+
+			.messagingSection-Error {
+				margin-top: 17px;
+				margin-bottom: 10px;
+			}
+		}
+
+		.loginlabel[for="passwordField"] {
+			margin-top: 19px;
+		}
+
+		#passwordField {
+			margin-bottom: 20px;
+		}
+
+		.register_password_container {
+			text-align: center;
+
+			.cc_forgot_password {
+				margin-top: 12px;
+				font-weight: 700;
+
+				@include respond(ipad-down) {
+					margin-top: 10px;
+				}
+
+			}
+		}
+	}
+}
+
+#processPage {
+	position: relative;
+	background-color: $flna-white;
+	margin: 40px auto;
+	width: 42.5%;
+	padding: 10px 15px;
+	min-width: 320px;
+	height: auto;
+	min-height: 360px;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 8.75px;
+
+	.panel-default>.panel-heading {
+		background-color: unset;
+	}
+}
+
+.loginStyle {
+	padding: 20px;
+}
+
+.login-form-group {
+	margin-bottom: 0;
+}
+
+.loginlabel {
+	padding: 5px 0px;
+	margin-bottom: 5px;
+	line-height: inherit;
+	font-size: inherit;
+  }

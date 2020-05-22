@@ -1,0 +1,1093 @@
+/*--- new account.scss --- */
+//Account Pages -- do not deploy this part--- 
+.MyAccount_navSection {
+	margin-top: 20px;
+
+	.panel-title {
+		font-size: 36px;
+		color: $flna-black;
+		text-transform: none;
+		font-weight: 700;
+		padding-left: 15px;
+	}
+
+	.panel-heading {
+		padding: 0;
+		border: 0;
+	}
+}
+
+.cc_deskLayout {
+	.navbar-collapse {
+		.navbar-nav {
+			.accountName {
+				line-height: 17px;
+				display: flex;
+				height: 58px;
+				align-items: center;
+				justify-content: center;
+
+			}
+
+			@include respond(small-down) {
+				.accountName {
+					margin-top: 10px;
+					display: block;
+					padding: 0 6px;
+					height: auto;
+
+					.accountname-div {
+						margin: 15px 0 5px 0
+					}
+
+					div {
+						width: 100%;
+						clear: both;
+					}
+
+					.effAccount {
+						margin: 20px 0 5px 0;
+						cursor: pointer;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* to show My accoiunt left menu on mobile */
+@include respond(small-down) {
+	.MyAccount_navSection {
+		.panel-heading {
+			.panel-title {
+				color: $flna-blue;
+				font-size: 16px;
+
+				.pull-right svg {
+					color: $flna-blue;
+				}
+			}
+		}
+	}
+}
+
+.ccPaymentOuterContainer {
+
+	.sopccPay,
+	.achPay {
+		fieldset {
+			border: 0px solid $color_silver;
+		}
+	}
+}
+
+/*-- credit page  -- */
+.FLNACC-credit-header {
+	.contactInfo_row_header {
+		line-height: 40px;
+		font-weight: bolder;
+		margin-bottom: 16px;
+		font-size: 18px;
+		border-bottom: 1px solid $myaccount-line-color;
+		margin-left: 0;
+	}
+
+	.cc_credit_status_val svg {
+		color: $flna-black;
+		font-weight: bold;
+	}
+
+	.pageHeaderDiv {
+		padding-left: 0;
+		margin-top: 20px;
+	}
+}
+
+.FLNACC-Credit-Details {
+	.cc_credit_information {
+		margin-top: 40px;
+
+		.col-sm-3 {
+			padding-left: 0;
+		}
+	}
+
+	.visible-xs.orderHistory {
+		margin-left: 15px;
+	}
+
+	.cc_lliorder_details {
+		.panel {
+			box-shadow: none;
+			-webkit-box-shadow: none;
+		}
+	}
+
+	.orderHistoryMobile {
+		.panel-heading-inner {
+			.cc_name {
+				font-size: 12px;
+			}
+		}
+
+		.panel-item {
+			margin: 0 0 10px 10px;
+			@include box-shadow(1px, 1px, 1px, 1px, rgba(20, 20, 20, 0.3));
+		}
+	}
+
+	.backtoOrder {
+		font-size: $body-text-size-small-current;
+		color: $color-blue-nav;
+		margin-top: 15px;
+	}
+
+	.creditMiniTitle {
+		display: block;
+		font-weight: bold;
+		color: $flna-black;
+		text-transform: uppercase;
+	}
+
+	.credit_row_top.col-xs-12 {
+		padding-left: 0;
+	}
+
+	.reviewContainer {
+		padding-bottom: 20px;
+	}
+}
+
+.reviewContainer {
+	.contactInfo_row_header {
+		padding-left: 15px;
+		margin-bottom: 16px;
+		font-size: 18px;
+		line-height: 62px;
+		border-bottom: 1px solid $flna-white;
+	}
+
+	/** TO REMOVE AFTER DOING ACCOUNT PAGE **/
+	.panel-heading {
+		&.cc_heading {
+			border-bottom: 1px solid $flna-gray-disabled;
+		}
+	}
+
+	/** TO REMOVE AFTER DOING ACCOUNT PAGE **/
+	.panel-body {
+		&.cc_body {
+			padding: 10px 0;
+		}
+	}
+}
+
+.orderConfirmation_total {
+	float: right;
+}
+
+.num_total {
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.FLNACC-credit-lines {
+	.cc_credit_line {
+		.LLI-CartItems-col {
+			p {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			span {
+				padding-top: 5px;
+				padding-bottom: 0px;
+				display: block;
+			}
+		}
+	}
+}
+
+/*-- account styling -- */
+.acctmainSection {
+	&>h2 {
+		font-weight: 400!important;
+		font-size: 36px;
+	}
+
+	.contentBorder {
+		font-size: $body-text-size-small-current;
+	}
+
+	.contentBoder+a {
+		font-size: $body-text-size-current;
+	}
+
+	.myCreditRows>.cc_table_col {
+		// padding-top: 0;
+		// padding-bottom: 16px;
+		padding-top: 8px!important;
+		padding-bottom: 8px!important;
+	}
+
+	.orderPaginationSec {
+		.cc_items_per_page {
+			font-weight: bold;
+
+			#itemsPerPage {
+				height: 27px;
+				min-width: 60px;
+				line-height: 17px;
+			}
+		}
+	}
+
+	#orderTable {
+		@include respond(ipad-down){
+			.cc_table_header {
+				font-size: 12px;
+			}
+	
+			.myAccOrderRows {
+				.cc_table_col { 
+					font-size: 13px;
+					max-width: initial;
+				}
+			}
+		}
+
+		.myCreditRows {
+
+			.cc_col_order_amount.creditAmt,
+			.cc_col_order_statust svg,
+			.cc_col_order_statust {
+				color: $flna-black;
+				font-weight: 700;
+			}
+
+			@include respond(ipad-down){
+				.cc_table_col {
+					font-size: 13px;
+					max-width: initial;
+				}
+			}
+		}
+
+		tr {
+			&:last-child {
+				.cc_table_col {
+					border-bottom: 1px solid $color-white;
+				}
+			}
+		}
+	}
+
+	.paymentMethodTable {
+		@media (min-width: 768px) {
+			.paymentMethodList {
+				padding-right: 35px;
+			}
+		}
+	}
+
+	.cc_table_col {
+		max-width: 135px;
+
+		@include respond(ipad-down) {
+			max-width: 75px;
+		}
+	}
+
+	.cc_table_col_actions {
+		.myWalletButton {
+			min-width: 75px;
+			height: 44px;
+		}
+	}
+
+	.notificationPreferencesForm .form-check-label {
+		display: inline;
+		font-weight: 700;
+	}
+
+	.cc_reset_password_form {
+		.cc_current_password_label,
+		.cc_new_password_label,
+		.cc_newpasswordconfirm_label {
+			width: 100%;
+			font-weight: 700;
+			font-size: inherit;
+			line-height: inherit;
+		}
+
+		.cc_current_password_value,
+		.cc_new_password_value,
+		.cc_newpasswordconfirm_value {
+			width: 50%;
+
+			@include respond(small-down) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.acctmainSection .contentBorder,
+a.gotoSectionContactInfoEdit span {
+	font-size: $button-text-font-size;
+	font-weight: 400;
+}
+
+.contentSplit {
+	/*Blue line*/
+	border-bottom: 1px solid $color-lightest-blue;
+	width: 100%;
+	float: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+/*-- account-contactinfo --*/
+
+small.email_title {
+	color: $color-gray-primary;
+}
+
+select.custom-select {
+	padding-top: 3px;
+	font-size: 14px;
+	font-weight: lighter;
+}
+
+.addel-target {
+	>div {
+		>div {
+
+			>div,
+			>input {
+				float: left;
+			}
+		}
+
+		&.form-group {
+			div.input-phone-group {
+				div.input-group-btn {
+					height: 31px;
+					border: 1px solid $color-lightpink;
+					border-left: 0;
+					border-right: 0;
+					width: 104px;
+
+					.btn_phoneType {
+						width: 72px;
+						height: 29px;
+						border-right: 0;
+						line-height: 10px;
+						border-width: 2px;
+						border-bottom-left-radius: 6px;
+						border-top-left-radius: 6px;
+						border-color: $flna-white;
+						background-color: $flna-blue;
+						color: $flna-white;
+					}
+
+					.dropdown-toggle {
+						border: 2px solid $flna-white;
+						height: 29px;
+						border-top-right-radius: 6px;
+						border-left: 0;
+						border-bottom-right-radius: 6px;
+						line-height: 10px;
+						background-color: $flna-blue;
+						color: $flna-white;
+
+						span {
+							svg {
+								&.fa-angle-down {
+									color: $flna-white;
+								}
+							}
+						}
+					}
+
+					.btn-danger {
+						position: relative;
+						top: -1px;
+						height: 31px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.caret {
+	visibility: hidden;
+}
+
+button.dropdown-toggle {
+	width: 32px !important;
+	padding: 6px 9px 6px 7px;
+	top: 0;
+}
+
+.nav-head {
+	pointer-events: none;
+}
+
+#myAccountPanel.collapse {
+	display: block;
+}
+
+#myAccountPanel {
+	margin-top: 30px;
+}
+
+span {
+
+	&.dropDownArrow,
+	&.dropUpArrow {
+		display: none;
+		transition: all 150ms linear;
+
+		svg {
+			color: $flna-white;
+		}
+	}
+}
+
+.MyAccount_navSection {
+	.cc_heading {
+		background-color: $myaccount-heading-background !important;
+	}
+
+	.list-group {
+		.list-group-item {
+			border: 0px solid $flna-white;
+			padding: 0 0 0 15px;
+			line-height: 42px;
+		}
+	}
+
+	.cc_myaccount_nav_list li {
+		// line-height: 8px;
+
+		a {
+			strong { font-weight: 400 }
+		}
+
+		a.gotoSection.active_account_panel {
+			color: $flna-blue;
+		}
+	}
+}
+
+.cc_myaccount_nav {
+	border-color: $color-lightblue-nav;
+}
+
+li.myaccount_tax_section {
+	border: none;
+	padding: 15px;
+}
+
+/*-- My Account Contact Information --*/
+.headerBorder {
+	font-weight: 400!important;
+	margin-bottom: 1em;
+}
+
+span.holiday_hint {
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+label.radio-inline {
+	color: $color-blue-nav;
+	font-size: $body-text-size-current;
+	font-weight: 700;
+}
+
+.addel-controller span {
+	font-size: $body-text-size-current;
+}
+
+small.point_contact {
+	color: $color-gray-primary;
+}
+
+select.custom-select {
+	padding-top: 3px;
+	font-size: $body-text-size-current;
+	font-weight: lighter;
+}
+
+#myAccountForm {
+	input.form-control {
+		max-width: 200px;
+	}
+
+	label {
+		font-weight: 700;
+	}
+}
+
+.zeroLeftPadding {
+	padding-left: 0;
+}
+
+.btn_reset_addr {
+	margin-top: 8px;
+}
+
+.contentBorder {
+	font-weight: 700;
+	margin-bottom: 1em;
+}
+
+.input-phone-group {
+	.dropdown-toggle {
+		span {
+			svg {
+				&.fa-angle-down {
+					color: $flna-white;
+				}
+			}
+		}
+	}
+}
+
+.onePhoneNeeded {
+	color: $color-red;
+
+	&.hintHidden {
+		visibility: hidden;
+	}
+}
+
+input#submit-btn {
+	text-transform: uppercase;
+}
+
+/*-- My Account My Files --*/
+.myFilesTable {
+	tr {
+		td {
+			a {
+				word-break: break-word;
+			}
+		}
+	}
+}
+
+#achAddress {
+	height: 0;
+}
+
+/*-- Notification Preference  --*/
+
+.notificationPreferencesForm {
+	.form-check {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	.checkboxContainer {
+		margin-bottom: 20px;
+	}
+
+	.form-group>label {
+		display: block;
+		font-weight: 700;
+		font-size: inherit;
+		line-height: inherit;
+	}
+
+	input {
+		&.form-control {
+			width: 50%;
+			margin: 10px 20px 10px 0;
+			display: inline-block;
+		}
+	}
+}
+
+.manipulateButton {
+	padding-top: 30px;
+	border-top: 1px solid $color-lightblue-nav;
+
+	input {
+		&.btn {
+			width: 100px;
+		}
+	}
+
+	.btn {
+		&.cancelSaveEmail {
+			margin-right: 20px;
+		}
+	}
+}
+
+.addNewEmail {
+	margin: 30px 0;
+	padding: 6px 30px;
+}
+
+.notificationTitle {
+	padding-bottom: 30px;
+	border-bottom: 1px solid $color-lightblue-nav;
+}
+
+.notificationPreferences {
+	.notiMsg {
+		margin: 20px 0;
+	}
+}
+
+/*-- My Bulk Order -- */
+
+.cc-upload-plus {
+	font-size: 2em;
+}
+
+.main_content_large_right_container {
+	min-height: 470px;
+}
+
+.title {
+	p {
+		display: inline-block;
+	}
+}
+
+.cc_select_fileCategory {
+	width: 180px;
+}
+
+/* -- My order -- */
+input {
+	&.requestedDate {
+		height: 44px;
+		padding: 6px 6px;
+		font-size: 12px;
+		line-height: 1.42857143;
+		color: $color-darkGrey;
+		background-color: $flna-white;
+		background-image: none;
+		border: 1px solid $color-white;
+		border-radius: 4px;
+
+		&:focus {
+			border: 1px solid $color-brown;
+		}
+
+		button {
+			margin-top: 6px;
+		}
+	}
+}
+
+.panel {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.panel-item {
+	margin-bottom: 10px;
+	@include box-shadow(1px, 1px, 1px, 1px, rgba(20, 20, 20, 0.3));
+
+	&.panel-list-item {
+		.panel-heading {
+			.panel-title {
+				color: $color-blue-nav;
+			}
+		}
+	}
+}
+
+.panel-item.panel-list-item .panel-heading .panel-title {
+	color: $color-blue-nav;
+}
+
+.order-value {
+	font-size: 16px;
+}
+
+.table {
+	td {
+		padding: 8px 4px;
+	}
+}
+
+.credit-col {
+	border-top: none !important;
+}
+
+/* -- Account Contact Info -- */
+@include respond(medium-up) {
+	.order-container {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+}
+
+@include respond(small) {
+	.FLNACC-wrapper.row {
+		margin: 10px;
+	}
+
+	.printbtndiv {
+		display: none;
+	}
+
+	.FLNACC-credit-lines {
+		padding-left: 15px;
+
+		.container {
+			width: 98%;
+			box-sizing: border-box;
+			margin-left: 0;
+			padding-left: 0;
+			padding-right: 0;
+
+			.col-xs-12 {
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+
+		.table .reviewItemDetails {
+			width: 35%;
+		}
+	}
+}
+
+@include respond(medium) {
+	.cc_deskLayout {
+		.navbar-collapse {
+			.navbar-nav {
+				.accountName {
+					height: 41px;
+				}
+			}
+		}
+	}
+
+
+	.nav-head {
+		pointer-events: auto;
+	}
+
+	#myAccountPanel {
+		&.collapse {
+			display: none;
+
+			&.in {
+				display: block;
+			}
+		}
+	}
+
+	span.dropDownArrow {
+		display: block;
+	}
+
+	.panel-heading[aria-expanded="false"] span.dropDownArrow,
+	.panel-heading[aria-expanded="true"] span.dropUpArrow {
+		display: block;
+	}
+
+	.panel-heading[aria-expanded="true"] span.dropDownArrow,
+	.panel-heading[aria-expanded="false"] span.dropUpArrow {
+		display: none;
+	}
+
+	.credit-line-item-span {
+		display: inline-block;
+		margin-right: 20px;
+		margin-top: 10px;
+	}
+}
+
+@include respond(small-down) {
+	.FLNACC-Credit-Details {
+		padding: 10px;
+
+		.orderHistoryMobile {
+			.panel-body {
+				padding: 0;
+			}
+		}
+
+		.row {
+			margin-right: 0;
+			margin-left: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.backtoOrder {
+			margin-top: 0;
+		}
+
+		.cc_credit_information {
+			margin-top: 10px;
+
+			.col-sm-3 {
+				border-bottom: 1px solid $color-lightblue-nav;
+				padding-bottom: 11px;
+				padding-left: 0;
+			}
+
+			.col-sm-3.noline {
+				border: 0;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+
+		.credit_row_top {
+			&.col-xs-12 {
+				padding-left: 13px;
+				padding-right: 13px;
+				margin-left: 5px;
+				box-sizing: border-box;
+			}
+		}
+
+		.FLNACC-credit-lines {
+			.cc_credit_line {
+				.col-xs-12 {
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+
+	.FLNACC-credit-lines {
+		padding-right: 10px;
+
+		.LLI-CartItems .LLI-CartItems-col.lliheader,
+		.cc_credit_line .LLI-CartItems-col span {
+			font-size: $body-text-size-small-current;
+		}
+
+		.panel-heading-inner {
+			.pull-right {
+				p {
+					margin: 0;
+				}
+			}
+		}
+
+		.creditDetailMobile {
+			.card-body table {
+				width: 95%;
+				margin: 0 auto;
+			}
+
+			.panel-item {
+				margin: 0 0 10px 0px;
+				@include box-shadow(1px, 1px, 1px, 1px, rgba(20, 20, 20, 0.3));
+			}
+
+			.panel-heading {
+				.cc_name {
+					a {
+						font-size: $body-text-size-small-current;
+					}
+				}
+			}
+		}
+	}
+
+	.creditDetailMobile {
+		.prod-name-div {
+			.LLI-CartItems-col {
+				width: 100%;
+				display: inline-block;
+
+				.cc_name {
+					width: 90%;
+					display: inline-block;
+				}
+
+				.pull-right {
+					width: 10%;
+				}
+			}
+		}
+	}
+
+	.FLNACC-credit-header {
+		.col-lg-8 {
+			padding-right: 0;
+		}
+
+		.cc_order_information {
+			padding-right: 10px;
+		}
+
+		.contactInfo_row_header {
+			padding-left: 0;
+		}
+
+		.pageHeaderDiv {
+			margin-top: 0;
+			padding-bottom: 10px;
+			padding-left: 0;
+		}
+
+		.credit_row_top {
+			border: 1px solid $color-lightblue-nav;
+			padding: 13px;
+			margin-top: 10px;
+		}
+	}
+
+	.cc_credit_information {
+		.form-group {
+			margin-bottom: 11px;
+		}
+	}
+
+	.printbtndiv {
+		display: none;
+	}
+
+	.pageHeaderDiv>div {
+		line-height: normal;
+		font-size: 18px;
+	}
+
+	form#myAccountForm input.input_phone {
+		width: 60%;
+	}
+
+	.notificationPreferencesForm {
+		input {
+			&.form-control {
+				width: 90%;
+			}
+		}
+	}
+
+	.credit-line-item-span {
+		display: inline-block;
+		margin-top: 10px;
+		font-size: $body-text-size-small-current;
+
+		&:first-child {
+			margin-right: 15px;
+		}
+	}
+
+	.form-group.date input.requestedDate {
+		padding: 0;
+	}
+
+	.date {
+		.input-group {
+			width: 100%;
+
+			span {
+				width: 100%;
+
+				input {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.order-container {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+/* on PaymentMethods.page */
+.fritolayBillingAccountText {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 40px 0;
+	border: 0;
+	box-shadow: none;
+}
+
+.btn-wrap {
+	padding: 0 8px;
+}
+
+.paymentContainer {
+	margin-top: 20px;
+
+	fieldset {
+		border: 0;
+	}
+}
+
+#MyAccount_navSection {
+	.panel-default>.panel-heading {
+		background-color: $flna-dark-blue;
+	}
+
+	.panel-heading {
+		padding: 23px 30px;
+	}
+
+	.cc_myaccount_nav_list li {
+		padding: 23px 30px;
+	}
+}
+
+.input-phone-group {
+	.input_phone {
+	  border-right: 0;
+	}
+  
+	.btn_phoneType {
+	  padding: 6px 0;
+	  font-weight: 400;
+	  color: $flna-dark-blue;
+	  border-right-color: transparent;
+	  border-left: 0;
+	  height: 31px;
+	  font-size: 14px;
+	  vertical-align: top;
+	  background-color: $color-lightblue-nav;
+	  border-top-color: $flna-blue;
+	  border-bottom-color: $flna-blue;
+  
+	  span {
+		svg.fa-angle-down {
+		  color: $flna-blue;
+		}
+	  }
+	}
+  
+	.dropdown-toggle {
+	  border-left-color: transparent;
+	  height: 31px;
+	  font-size: 14px;
+	  vertical-align: top;
+	  background-color: $color-lightblue-nav;
+	  border-top-color: $flna-blue;
+	  border-bottom-color: $flna-blue;
+  
+	  span {
+		svg.fa-angle-down {
+		  color: $flna-blue;
+		}
+	  }
+	}
+  
+	.btn-danger {
+	  vertical-align: top;
+	}
+  }

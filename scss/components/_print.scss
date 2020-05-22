@@ -1,0 +1,95 @@
+//Print
+@media print {
+
+	html,
+	body {
+		page-break-after: avoid !important;
+		page-break-before: avoid !important;
+	}
+
+	body {
+		margin-top: 0 !important;
+		padding-top: 0 !important;
+	}
+
+	table.visible-print {
+		display: table !important;
+	}
+
+	tr.visible-print {
+		display: table-row !important;
+	}
+
+	th,
+	td {
+		&.visible-print {
+			display: table-cell !important;
+		}
+	}
+
+	.visible-print,
+	.visible-print-block {
+		display: block !important;
+	}
+
+
+	/***** from Header.SCSS*****/
+	#orderTable {
+
+		.myCreditRows,
+		.myAccOrderRows {
+			a:after {
+				content: "none"
+			}
+		}
+	}
+
+	.acctmainSection #orderTable {
+		display: inline-block;
+	}
+
+	.contentBody {
+		border: 0;
+	}
+
+	/*-- from Account.scss --- */
+	.FLNACC-Credit-Details {
+		#orderTable {
+			display: block;
+		}
+	}
+
+	.credit_row_top {
+		margin-top: 0 !important;
+		page-break-inside: avoid;
+	}
+
+	.credit_row_top,
+	h1,
+	.table {
+		page-break-after: avoid;
+		page-break-before: avoid;
+	}
+
+	.cc_content_body {
+		width: 100%;
+	}
+
+	a[href],
+	a[href^="javascript:"],
+	a[href^="#"] {
+		&:after {
+			content: "" !important;
+		}
+	}
+
+	.effwig,
+	.promotion-box-Banner,
+	.MyAccount_navSection_tablet,
+	.reorder,
+	.unprintable,
+	header,
+	#orderTable {
+		//display: none !important;
+	}
+}

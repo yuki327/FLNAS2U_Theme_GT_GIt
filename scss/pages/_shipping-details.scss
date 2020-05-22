@@ -1,0 +1,74 @@
+.order-cart-items {
+	margin-top: 15px;
+
+	tr th.LLI-CartItems-col {
+		border-top: 0;
+		vertical-align: middle;
+	}
+
+	td p {
+		margin: 0;
+	}
+}
+
+.cartItemPhone {
+	.cartLineItems {
+		padding: 15px 0;
+		border-bottom: 1px solid $color-white;
+	}
+
+	.cc_name {
+		font-size: $body-text-size-current;
+	}
+}
+
+.invisible_info {
+	display: none;
+}
+
+.cc_buyerInfo {
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.buyerInfo label {
+	font-weight: 400;
+}
+
+.address_selection_display {
+	label {
+		font-weight: 700;
+
+		+br+span {
+			font-weight: 700;
+
+			strong { font-weight: 400 }
+		}
+	}
+}
+
+.cc_shipping_group_pane {
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding-left: 15px;
+}
+
+.requestdate_warning {
+	float: left;
+	margin: 5px 0;
+}
+
+.contactInfo_row_header a {
+	color: #242424;
+}
+
+.shipInfo {
+	padding: 0;
+}
+
+/* also on BodyEnd_OrderDetails */
+.shippingContainer .cc_shipping_label {
+	line-height: 2.5
+}

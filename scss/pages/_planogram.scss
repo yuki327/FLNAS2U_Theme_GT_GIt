@@ -1,0 +1,115 @@
+//Planogram
+.planogram-wrapper {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.ccplanogram {
+	float: left;
+	border-top: 1px solid $flna-gray-border;
+	width: 100%;
+	padding-top: 20px;
+
+
+	.dashboard-subTitle {
+		font-weight: 700;
+		line-height: 40px;
+	}
+
+	.dashboard-subHeader-text {
+		margin-top: 17px;
+		margin-bottom: 15px;
+		margin-left: 0;
+
+		@include respond(small-down) {
+			line-height: 24px;
+		}
+	}
+
+	.slide {
+		.slick-list {
+
+			margin-bottom: 20px;
+
+			.slick-track {
+				margin-left: 0;
+			}
+		}
+
+		.slick-dots {
+			@include respond(x-small) {
+				margin-bottom: 10px;
+			}
+		}
+
+		.planogram-item {
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-bottom: 5px;
+
+			@include respond(small-down) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.item-image {
+				max-height: 197px;
+				overflow: hidden;
+
+				@include respond(small-down) {
+					max-height: fit-content;
+				}
+
+				img {
+					width: 100%;
+					max-height: 170px;
+
+					@include respond(small-down) {
+						height: auto;
+						max-height: 100%;
+					}
+				}
+			}
+
+
+
+			.item-info {
+				padding: 15px 20px;
+
+				.name,
+				.desc {
+					line-height: 25px;
+				}
+
+				.name {
+					font-weight: 700;
+
+					@include respond(ipad-down) {
+						min-height: 56px;
+					}
+				}
+
+				.desc {
+					display: -webkit-box;
+					-webkit-line-clamp: 3;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+					padding-right: 5px;
+					margin-bottom: 17px;
+					margin-top: 7px;
+					min-height: 74px;
+				}
+
+				.btn-div {
+					a.btn {
+						width: 100%;
+						text-decoration: none;
+					}
+				}
+			}
+
+
+		}
+	}
+}
